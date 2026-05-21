@@ -1,228 +1,436 @@
-export default function LuxuryStore() {
-  const products = [
-    {
-      name: 'Aura Serum',
-      price: '€48',
-      image:
-        'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop',
-    },
-    {
-      name: 'Velvet Cream',
-      price: '€62',
-      image:
-        'https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop',
-    },
-    {
-      name: 'Noir Essence',
-      price: '€89',
-      image:
-        'https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1200&auto=format&fit=crop',
-    },
-  ]
+# index.html
 
-  return (
-    <div className="bg-neutral-950 text-white min-h-screen font-sans">
-      <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/30 border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-          <h1 className="text-2xl tracking-[0.3em] uppercase font-light">
-            Atelier
-          </h1>
+```html
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atelier Luxury Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-          <nav className="hidden md:flex gap-10 text-sm uppercase tracking-widest text-white/70">
-            <a href="#shop" className="hover:text-white transition">
-              Shop
-            </a>
-            <a href="#about" className="hover:text-white transition">
-              About
-            </a>
-            <a href="#journal" className="hover:text-white transition">
-              Journal
-            </a>
-            <a href="#contact" className="hover:text-white transition">
-              Contact
-            </a>
-          </nav>
-        </div>
-      </header>
+  <header>
+    <div class="container nav">
+      <h1>ATELIER</h1>
 
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=2000&auto=format&fit=crop"
-          alt="Hero"
-          className="absolute inset-0 w-full h-full object-cover opacity-60"
-        />
-
-        <div className="absolute inset-0 bg-black/50" />
-
-        <div className="relative z-10 text-center px-6 max-w-4xl">
-          <p className="uppercase tracking-[0.4em] text-sm text-white/70 mb-6">
-            Modern Luxury Essentials
-          </p>
-
-          <h2 className="text-5xl md:text-8xl font-light leading-none mb-8">
-            Elevated
-            <br />
-            Everyday
-          </h2>
-
-          <p className="text-white/70 max-w-xl mx-auto text-lg leading-relaxed mb-10">
-            A premium ecommerce experience inspired by editorial fashion and
-            modern minimalist brands.
-          </p>
-
-          <button className="px-8 py-4 border border-white rounded-full hover:bg-white hover:text-black transition duration-300 uppercase tracking-widest text-sm">
-            Explore Collection
-          </button>
-        </div>
-      </section>
-
-      <section
-        id="shop"
-        className="max-w-7xl mx-auto px-6 py-28 grid md:grid-cols-3 gap-8"
-      >
-        {products.map((product) => (
-          <div
-            key={product.name}
-            className="group bg-white/5 rounded-[2rem] overflow-hidden border border-white/10"
-          >
-            <div className="overflow-hidden">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-[500px] object-cover group-hover:scale-105 transition duration-700"
-              />
-            </div>
-
-            <div className="p-6 flex items-center justify-between">
-              <div>
-                <h3 className="text-2xl font-light mb-2">{product.name}</h3>
-                <p className="text-white/60">{product.price}</p>
-              </div>
-
-              <button className="border border-white/20 px-5 py-3 rounded-full text-sm uppercase tracking-widest hover:bg-white hover:text-black transition">
-                Add
-              </button>
-            </div>
-          </div>
-        ))}
-      </section>
-
-      <section
-        id="about"
-        className="grid md:grid-cols-2 items-center gap-16 max-w-7xl mx-auto px-6 py-28"
-      >
-        <div>
-          <p className="uppercase tracking-[0.3em] text-white/50 text-sm mb-6">
-            About The Brand
-          </p>
-
-          <h2 className="text-4xl md:text-6xl font-light leading-tight mb-8">
-            Designed for timeless living.
-          </h2>
-
-          <p className="text-white/70 text-lg leading-relaxed mb-8">
-            Inspired by luxury editorials, refined textures, and minimalist
-            aesthetics, Atelier blends beauty, fashion, and lifestyle into one
-            seamless digital experience.
-          </p>
-
-          <button className="px-7 py-4 bg-white text-black rounded-full uppercase tracking-widest text-sm hover:opacity-90 transition">
-            Discover More
-          </button>
-        </div>
-
-        <div>
-          <img
-            src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1400&auto=format&fit=crop"
-            alt="About"
-            className="rounded-[2rem] w-full h-[700px] object-cover"
-          />
-        </div>
-      </section>
-
-      <section
-        id="journal"
-        className="max-w-7xl mx-auto px-6 py-28 border-t border-white/10"
-      >
-        <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-8">
-          <div>
-            <p className="uppercase tracking-[0.3em] text-white/50 text-sm mb-4">
-              Journal
-            </p>
-            <h2 className="text-4xl md:text-6xl font-light">
-              Stories & Inspiration
-            </h2>
-          </div>
-
-          <p className="max-w-md text-white/60 leading-relaxed">
-            Editorial articles, creative direction, product stories, and curated
-            inspiration from modern luxury culture.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {[1, 2, 3].map((item) => (
-            <article
-              key={item}
-              className="border border-white/10 rounded-[2rem] overflow-hidden bg-white/5"
-            >
-              <img
-                src={`https://picsum.photos/800/600?random=${item}`}
-                alt="Editorial"
-                className="w-full h-72 object-cover"
-              />
-
-              <div className="p-8">
-                <p className="text-white/40 uppercase tracking-widest text-xs mb-4">
-                  Editorial
-                </p>
-
-                <h3 className="text-2xl font-light mb-4 leading-snug">
-                  The future of premium digital commerce.
-                </h3>
-
-                <p className="text-white/60 leading-relaxed mb-6">
-                  Exploring visual storytelling and refined ecommerce
-                  experiences.
-                </p>
-
-                <button className="uppercase tracking-widest text-sm border-b border-white/40 pb-1 hover:border-white transition">
-                  Read More
-                </button>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section
-        id="contact"
-        className="max-w-4xl mx-auto px-6 py-32 text-center"
-      >
-        <p className="uppercase tracking-[0.3em] text-white/50 text-sm mb-6">
-          Newsletter
-        </p>
-
-        <h2 className="text-4xl md:text-6xl font-light mb-8">
-          Join the Atelier world.
-        </h2>
-
-        <div className="flex flex-col md:flex-row gap-4 justify-center max-w-2xl mx-auto">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="flex-1 bg-white/5 border border-white/10 rounded-full px-6 py-4 outline-none focus:border-white/40"
-          />
-
-          <button className="px-8 py-4 bg-white text-black rounded-full uppercase tracking-widest text-sm hover:opacity-90 transition">
-            Subscribe
-          </button>
-        </div>
-      </section>
-
-      <footer className="border-t border-white/10 py-10 px-6 text-center text-white/40 text-sm">
-        © 2026 Atelier — Luxury Ecommerce Experience.
-      </footer>
+      <nav>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#journal">Journal</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-  )
+  </header>
+
+  <section class="hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+      <p>MODERN LUXURY ESSENTIALS</p>
+      <h2>Elevated Everyday</h2>
+      <span>
+        Premium ecommerce experience inspired by modern editorial brands.
+      </span>
+
+      <button>Explore Collection</button>
+    </div>
+  </section>
+
+  <section id="shop" class="products container">
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop" />
+
+      <div class="product-info">
+        <div>
+          <h3>Aura Serum</h3>
+          <p>€48</p>
+        </div>
+
+        <button>Add</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop" />
+
+      <div class="product-info">
+        <div>
+          <h3>Velvet Cream</h3>
+          <p>€62</p>
+        </div>
+
+        <button>Add</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1200&auto=format&fit=crop" />
+
+      <div class="product-info">
+        <div>
+          <h3>Noir Essence</h3>
+          <p>€89</p>
+        </div>
+
+        <button>Add</button>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="about" class="about container">
+
+    <div class="about-text">
+      <p>ABOUT THE BRAND</p>
+
+      <h2>Designed for timeless living.</h2>
+
+      <span>
+        Inspired by luxury editorials and minimalist aesthetics, Atelier blends beauty and lifestyle into one seamless experience.
+      </span>
+
+      <button>Discover More</button>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1400&auto=format&fit=crop" />
+
+  </section>
+
+  <section id="journal" class="journal container">
+
+    <div class="journal-top">
+      <div>
+        <p>JOURNAL</p>
+        <h2>Stories & Inspiration</h2>
+      </div>
+
+      <span>
+        Editorial articles and curated inspiration from modern luxury culture.
+      </span>
+    </div>
+
+    <div class="journal-grid">
+
+      <article>
+        <img src="https://picsum.photos/800/600?1" />
+
+        <div>
+          <p>EDITORIAL</p>
+          <h3>The future of premium ecommerce.</h3>
+          <button>Read More</button>
+        </div>
+      </article>
+
+      <article>
+        <img src="https://picsum.photos/800/600?2" />
+
+        <div>
+          <p>EDITORIAL</p>
+          <h3>Minimal design meets storytelling.</h3>
+          <button>Read More</button>
+        </div>
+      </article>
+
+      <article>
+        <img src="https://picsum.photos/800/600?3" />
+
+        <div>
+          <p>EDITORIAL</p>
+          <h3>Luxury digital experiences in 2026.</h3>
+          <button>Read More</button>
+        </div>
+      </article>
+
+    </div>
+
+  </section>
+
+  <section id="contact" class="newsletter">
+
+    <p>NEWSLETTER</p>
+    <h2>Join the Atelier world.</h2>
+
+    <div class="newsletter-form">
+      <input type="email" placeholder="Enter your email" />
+      <button>Subscribe</button>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Atelier — Luxury Ecommerce Experience.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+```
+
+---
+
+# style.css
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  background: #0b0b0b;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+}
+
+nav {
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.hero {
+  height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=2000&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-content p {
+  letter-spacing: 5px;
+  font-size: 12px;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.hero-content h2 {
+  font-size: 90px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.hero-content span {
+  display: block;
+  opacity: 0.7;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+button {
+  padding: 15px 35px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 120px 0;
+}
+
+.product-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.product-card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 60px;
+  align-items: center;
+  padding: 120px 0;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 30px;
+  height: 700px;
+  object-fit: cover;
+}
+
+.about-text p,
+.journal-top p,
+.newsletter p {
+  font-size: 12px;
+  letter-spacing: 4px;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+
+.about-text h2,
+.journal-top h2,
+.newsletter h2 {
+  font-size: 60px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.about-text span,
+.journal-top span {
+  line-height: 1.8;
+  opacity: 0.7;
+}
+
+.journal {
+  padding: 120px 0;
+}
+
+.journal-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.journal article {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.journal article img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.journal article div {
+  padding: 30px;
+}
+
+.newsletter {
+  text-align: center;
+  padding: 140px 20px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  padding: 16px 25px;
+  width: 320px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+
+  nav {
+    display: none;
+  }
+
+  .hero-content h2 {
+    font-size: 52px;
+  }
+
+  .about-text h2,
+  .journal-top h2,
+  .newsletter h2 {
+    font-size: 42px;
+  }
+
+  .journal-top {
+    flex-direction: column;
+  }
+
+}
+```
+
+---
+
+# script.js
+
+```javascript
+console.log('Atelier Luxury Store Loaded');
+```
