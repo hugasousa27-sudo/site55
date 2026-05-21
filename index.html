@@ -37,7 +37,7 @@
 
   <section id="shop" class="products container">
 
-    <div class="product-card">
+    <div class="product-card" data-product-id="aura-serum" data-product-name="Aura Serum" data-product-price="€48" data-product-img="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop">
       <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop" />
 
       <div class="product-info">
@@ -46,11 +46,11 @@
           <p>€48</p>
         </div>
 
-        <button>Add</button>
+        <button class="open-product">Add</button>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-product-id="velvet-cream" data-product-name="Velvet Cream" data-product-price="€62" data-product-img="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop">
       <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1200&auto=format&fit=crop" />
 
       <div class="product-info">
@@ -59,11 +59,11 @@
           <p>€62</p>
         </div>
 
-        <button>Add</button>
+        <button class="open-product">Add</button>
       </div>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-product-id="noir-essence" data-product-name="Noir Essence" data-product-price="€89" data-product-img="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1200&auto=format&fit=crop">
       <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1200&auto=format&fit=crop" />
 
       <div class="product-info">
@@ -72,94 +72,41 @@
           <p>€89</p>
         </div>
 
-        <button>Add</button>
+        <button class="open-product">Add</button>
       </div>
     </div>
 
   </section>
 
   <section id="about" class="about container">
-
-    <div class="about-text">
-      <p>ABOUT THE BRAND</p>
-
-      <h2>Designed for timeless living.</h2>
-
-      <span>
-        Inspired by luxury editorials and minimalist aesthetics, Atelier blends beauty and lifestyle into one seamless experience.
-      </span>
-
-      <button>Discover More</button>
-    </div>
-
-    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1400&auto=format&fit=crop" />
-
-  </section>
+      </section>
 
   <section id="journal" class="journal container">
-
-    <div class="journal-top">
-      <div>
-        <p>JOURNAL</p>
-        <h2>Stories & Inspiration</h2>
-      </div>
-
-      <span>
-        Editorial articles and curated inspiration from modern luxury culture.
-      </span>
-    </div>
-
-    <div class="journal-grid">
-
-      <article>
-        <img src="https://picsum.photos/800/600?1" />
-
-        <div>
-          <p>EDITORIAL</p>
-          <h3>The future of premium ecommerce.</h3>
-          <button>Read More</button>
-        </div>
-      </article>
-
-      <article>
-        <img src="https://picsum.photos/800/600?2" />
-
-        <div>
-          <p>EDITORIAL</p>
-          <h3>Minimal design meets storytelling.</h3>
-          <button>Read More</button>
-        </div>
-      </article>
-
-      <article>
-        <img src="https://picsum.photos/800/600?3" />
-
-        <div>
-          <p>EDITORIAL</p>
-          <h3>Luxury digital experiences in 2026.</h3>
-          <button>Read More</button>
-        </div>
-      </article>
-
-    </div>
-
-  </section>
+      </section>
 
   <section id="contact" class="newsletter">
-
-    <p>NEWSLETTER</p>
-    <h2>Join the Atelier world.</h2>
-
-    <div class="newsletter-form">
-      <input type="email" placeholder="Enter your email" />
-      <button>Subscribe</button>
-    </div>
-
-  </section>
+      </section>
 
   <footer>
     © 2026 Atelier — Luxury Ecommerce Experience.
   </footer>
+
+  <div id="product-modal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content container">
+      <button class="close-modal">&times;</button>
+      <div class="modal-body">
+        <img id="modal-product-img" src="" alt="Produto">
+        <div class="modal-details">
+          <h2 id="modal-product-name"></h2>
+          <p id="modal-product-price"></p>
+          <div class="modal-actions">
+            <button id="modal-add-to-cart">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
