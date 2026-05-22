@@ -2,10 +2,313 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Teste Rápido</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Criativo | Premium & Minimalista</title>
+    <meta name="description" content="Um website de portfólio moderno e interativo criado com HTML, CSS vanilla e JavaScript.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS Estilos -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>O teste funcionou!</h1>
+<body class="dark-theme">
+    <!-- Efeito de Luz de Fundo (Background Glows) -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- Barra de Navegação (Navbar) -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">
+                <span class="logo-dot"></span>
+                <span>Creative.</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active">Início</a>
+                <a href="#about" class="nav-link">Sobre</a>
+                <a href="#projects" class="nav-link">Projetos</a>
+                <a href="#contact" class="nav-link">Contacto</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-btn" aria-label="Alternar tema">
+                    <i data-lucide="moon" class="icon-moon"></i>
+                    <i data-lucide="sun" class="icon-sun"></i>
+                </button>
+                <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Abrir Menu">
+                    <i data-lucide="menu" class="icon-menu"></i>
+                    <i data-lucide="x" class="icon-close"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Secção Hero -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge animate-fade-in">
+                        <span class="pulse-dot"></span>
+                        Disponível para novos projetos
+                    </div>
+                    <h1 class="hero-title animate-slide-up">
+                        Criando <span class="gradient-text">experiências</span> digitais memoráveis.
+                    </h1>
+                    <p class="hero-description animate-slide-up-delayed">
+                        Sou um designer e desenvolvedor criativo focado em construir interfaces web elegantes, eficientes e esteticamente perfeitas.
+                    </p>
+                    <div class="hero-actions animate-slide-up-delayed-2">
+                        <a href="#projects" class="btn btn-primary">Ver Trabalhos</a>
+                        <a href="#contact" class="btn btn-secondary">Entrar em Contacto</a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="visual-card-wrapper animate-float">
+                        <div class="visual-card">
+                            <div class="card-header">
+                                <span class="dot-red"></span>
+                                <span class="dot-yellow"></span>
+                                <span class="dot-green"></span>
+                            </div>
+                            <div class="card-content">
+                                <span class="code-keyword">const</span> <span class="code-variable">developer</span> = {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;name: <span class="code-string">"António Silva"</span>,<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;role: <span class="code-string">"Creative Dev"</span>,<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;skills: [<span class="code-string">"Design"</span>, <span class="code-string">"Frontend"</span>, <span class="code-string">"UI/UX"</span>],<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;passion: <span class="code-string">"Perfect Pixels"</span><br>
+                                };
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span class="mouse-icon">
+                    <span class="mouse-wheel"></span>
+                </span>
+            </div>
+        </section>
+
+        <!-- Secção Sobre Mim -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="sub-title">Quem sou</span>
+                    <h2 class="section-title">Sobre Mim</h2>
+                    <p class="section-desc">Uma breve introdução à minha filosofia de trabalho e competências.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text-card glass-card">
+                        <h3>A minha paixão é o design interativo</h3>
+                        <p>Acredito que o design não é apenas como algo se parece, mas sim como funciona. Combino estética visual refinada com código limpo e otimizado para entregar produtos que encantam os utilizadores.</p>
+                        <p>Com mais de 5 anos de experiência na área digital, já colaborei com startups e marcas globais para desenhar e programar soluções web elegantes.</p>
+                    </div>
+
+                    <div class="about-stats-card glass-card">
+                        <div class="stat-item">
+                            <span class="stat-number">40+</span>
+                            <span class="stat-label">Projetos Concluídos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Clientes Satisfeitos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Anos de Experiência</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-container">
+                    <h4 class="skills-title">Tecnologias & Ferramentas</h4>
+                    <div class="skills-grid">
+                        <div class="skill-tag"><i data-lucide="html5"></i> HTML5</div>
+                        <div class="skill-tag"><i data-lucide="css3"></i> CSS3 / SCSS</div>
+                        <div class="skill-tag"><i data-lucide="javascript"></i> JavaScript (ES6+)</div>
+                        <div class="skill-tag"><i data-lucide="figma"></i> Figma</div>
+                        <div class="skill-tag"><i data-lucide="git-branch"></i> Git & GitHub</div>
+                        <div class="skill-tag"><i data-lucide="chrome"></i> UI/UX Design</div>
+                        <div class="skill-tag"><i data-lucide="smartphone"></i> Responsivo</div>
+                        <div class="skill-tag"><i data-lucide="zap"></i> Web Performance</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secção Projetos -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="sub-title">O meu trabalho</span>
+                        <h2 class="section-title">Projetos Recentes</h2>
+                    </div>
+                    <!-- Filtros de Projetos -->
+                    <div class="project-filters">
+                        <button class="filter-btn active" data-filter="all">Todos</button>
+                        <button class="filter-btn" data-filter="design">Design</button>
+                        <button class="filter-btn" data-filter="dev">Desenvolvimento</button>
+                    </div>
+                </div>
+
+                <!-- Grid de Projetos -->
+                <div class="projects-grid">
+                    <!-- Projeto 1 -->
+                    <div class="project-card glass-card" data-category="dev">
+                        <div class="project-image-container">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Dashboard Plataforma SaaS" class="project-image" loading="lazy">
+                            <div class="project-badge">Desenvolvimento</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Portal SaaS Inteligente</h3>
+                            <p>Uma dashboard analítica elegante construída para monitorização em tempo real de métricas financeiras.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link-btn" aria-label="Ver demonstração"><i data-lucide="external-link"></i> Demo</a>
+                                <a href="#" class="project-link-btn" aria-label="Ver código"><i data-lucide="github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 2 -->
+                    <div class="project-card glass-card" data-category="design">
+                        <div class="project-image-container">
+                            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop" alt="Branding e Website de Studio Criativo" class="project-image" loading="lazy">
+                            <div class="project-badge">Design</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Branding Studio Lumina</h3>
+                            <p>Design de identidade visual e website conceitual focado em fotografia de moda artística.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link-btn" aria-label="Ver demonstração"><i data-lucide="external-link"></i> Behance</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 3 -->
+                    <div class="project-card glass-card" data-category="dev">
+                        <div class="project-image-container">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop" alt="Aplicação Mobile de Finanças" class="project-image" loading="lazy">
+                            <div class="project-badge">Desenvolvimento</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>App de Finanças Pessoais</h3>
+                            <p>Interface de aplicação híbrida minimalista para controlo financeiro pessoal e investimentos.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link-btn" aria-label="Ver demonstração"><i data-lucide="external-link"></i> Demo</a>
+                                <a href="#" class="project-link-btn" aria-label="Ver código"><i data-lucide="github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Projeto 4 -->
+                    <div class="project-card glass-card" data-category="design">
+                        <div class="project-image-container">
+                            <img src="https://images.unsplash.com/photo-1541462608141-2ffb68df685e?q=80&w=800&auto=format&fit=crop" alt="Redesenho de E-commerce" class="project-image" loading="lazy">
+                            <div class="project-badge">Design</div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Redesenho E-Commerce</h3>
+                            <p>UX/UI Design completo de uma loja online de mobiliário escandinavo minimalista.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-link-btn" aria-label="Ver demaonstração"><i data-lucide="external-link"></i> Figma</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secção Contacto -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <span class="sub-title">Vamos conversar</span>
+                        <h2 class="section-title">Tem um projeto em mente?</h2>
+                        <p class="contact-desc">Estou sempre aberto a discutir novas ideias, design de interfaces e oportunidades de desenvolvimento.</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i data-lucide="mail"></i></div>
+                                <div>
+                                    <h4>E-mail</h4>
+                                    <a href="mailto:hello@creative.com">hello@creative.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+                                <div>
+                                    <h4>Localização</h4>
+                                    <span>Porto, Portugal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container glass-card">
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="name">Nome Completo</label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="name" name="name" required placeholder="Ex: António Silva">
+                                    <span class="input-line"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <div class="input-wrapper">
+                                    <input type="email" id="email" name="email" required placeholder="Ex: email@exemplo.com">
+                                    <span class="input-line"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensagem</label>
+                                <div class="input-wrapper">
+                                    <textarea id="message" name="message" required rows="4" placeholder="Fale-me um pouco sobre o seu projeto..."></textarea>
+                                    <span class="input-line"></span>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" id="formSubmitBtn">
+                                <span>Enviar Mensagem</span>
+                                <i data-lucide="send" class="btn-icon"></i>
+                            </button>
+                        </form>
+                        <!-- Mensagem de Feedback -->
+                        <div id="formFeedback" class="form-feedback hidden">
+                            <div class="feedback-content">
+                                <div class="feedback-icon-success"><i data-lucide="check-circle"></i></div>
+                                <h3>Mensagem enviada com sucesso!</h3>
+                                <p>Agradeço o contacto. Responderei o mais brevemente possível.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé (Footer) -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 Creative. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                <a href="#" aria-label="Dribbble"><i data-lucide="dribbble"></i></a>
+                <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lucide Icons Library -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Script Personalizado -->
+    <script src="script.js"></script>
 </body>
 </html>
